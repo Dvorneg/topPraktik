@@ -23,11 +23,11 @@ import org.springframework.context.annotation.Configuration;
                 version = "1.0",
                 description = """
                         Spring Boot приложение по <a href='https://javaops.ru/view/topjava'>курсу TopJava</a>
-                        <p><b>Тестовые креденшелы:</b><br>
+                        <p><b>Тестовый доступ:</b><br>
                         - user@yandex.ru / password<br>
                         - admin@gmail.com / admin</p>
                         """,
-                contact = @Contact(url = "https://javaops.ru/#contacts", name = "Grigory Kislin", email = "admin@javaops.ru")
+                contact = @Contact(url = "https://m.ru", name = "Denis", email = "denis@m.ru")
         ),
         security = @SecurityRequirement(name = "basicAuth")
 )
