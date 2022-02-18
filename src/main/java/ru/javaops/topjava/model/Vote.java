@@ -28,7 +28,7 @@ public class Vote extends BaseEntity implements HasId, Serializable {
     private Integer user_id;  //int NOT NULL,
 
     @Column(name = "restaurant_id", nullable = false)
-    @Range(min = 10, max = 10000)
+    // @Range(min = 10, max = 10000)
     private Integer menu_id;
 
     @Column(name = "date_vote", nullable = false, columnDefinition = "timestamp default now()", updatable = false)

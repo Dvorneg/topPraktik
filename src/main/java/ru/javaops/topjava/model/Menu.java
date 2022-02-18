@@ -24,7 +24,7 @@ public class Menu extends BaseEntity implements HasId, Serializable {
 
 
     @Column(name = "restaurant_id", nullable = false, columnDefinition = "int default 2000")
-    @Range(min = 10, max = 10000)
+   // @Range(min = 10, max = 10000)
     private Integer restaurant_id;
 
     @Column(name = "enabled", nullable = false, columnDefinition = "bool default true")

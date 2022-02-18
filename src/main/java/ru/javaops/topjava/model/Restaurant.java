@@ -22,9 +22,9 @@ import java.io.Serializable;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Restaurant extends NamedEntity implements HasId, Serializable {
 
-    @Column(name = "commentary")
+ /*   @Column(name = "commentary")
     @NotBlank
     @NoHtml
     private String commentary;
-
+*/
 }
