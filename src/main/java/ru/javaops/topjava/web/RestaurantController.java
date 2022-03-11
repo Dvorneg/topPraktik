@@ -28,4 +28,10 @@ public class RestaurantController {
         return ResponseEntity.of(repository.get(id));
     }
 
+/*    @GetMapping("/go")
+    public ResponseEntity<Object> get(@AuthenticationPrincipal AuthUser authUser) {
+        log.info("go go -  for user {}",  authUser.id());
+        return ResponseEntity.of(repository.get(authUser.id()));
+    }*/
+
 }

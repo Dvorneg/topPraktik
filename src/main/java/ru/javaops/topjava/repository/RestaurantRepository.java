@@ -20,4 +20,18 @@ public interface RestaurantRepository extends BaseRepository<Restaurant> {
     join RESTAURANT R on M2.RESTAURANT_ID = R.ID
     WHERE MENU_DATE = '2022-02-01 10:00:00' AND RESTAURANT_ID = 1*/
 
+
+/*
+  Получить меню всех ресторанов на дату
+  SELECT  R.NAME ,MENU_ITEM.NAME, PRICE FROM MENU_ITEM
+    INNER join MENU  M2 on MENU_ITEM.MENU_ID = M2.ID
+    INNER join RESTAURANT R on M2.RESTAURANT_ID = R.ID
+    WHERE MENU_DATE > '2022-02-01 00:00:00' AND MENU_DATE < '2022-02-01 23:59:59'*/
+
+/*    @Query("SELECT  R.NAME ,MENU_ITEM.NAME, PRICE FROM MENU_ITEM
+            "    INNER join MENU  M2 on MENU_ITEM.MENU_ID = M2.ID" +
+            "    INNER join RESTAURANT R on M2.RESTAURANT_ID = R.ID" +
+            "    WHERE MENU_DATE > '2022-02-01 00:00:00' AND MENU_DATE < '2022-02-01 23:59:59'")
+    Optional<Object> getGo(int id);*/
+
 }

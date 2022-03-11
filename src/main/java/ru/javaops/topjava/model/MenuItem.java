@@ -11,6 +11,7 @@ import ru.javaops.topjava.HasId;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 //Название блюда и цена
@@ -26,8 +27,10 @@ public class MenuItem extends NamedEntity implements HasId {
     @Range(min = 10, max = 5000)
     private BigDecimal price;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    //@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH})
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "menu_id", nullable = false)
     @JsonBackReference
-    private Menu Menu;
+    private Menu menu;
+
 }
